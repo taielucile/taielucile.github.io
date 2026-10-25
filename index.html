@@ -4,7 +4,7 @@
  <div class="hero-composition">
   <div class="hero-copy">
    <h1>I study <em>race, disability, <span class="hero-phrase">and institutions.</span></em></h1>
-   <p class="hero-statement">I’m a sociologist interested in how professions define disability and how those definitions affect Black children and young people. I’m interested in how speech-language pathologists decide what counts as a communication disorder, whose speech provides the standard, and how Black children experience assessment and therapy.</p>
+   <p class="hero-statement">I’m a sociologist studying racialized diagnostic authority: how professions establish the standards used to identify disability, and how those standards govern access to services. My interests center on speech-language pathology, anti-Blackness, and the lives of Black disabled children and youth from low-resource communities.</p>
    <div class="hero-links"><a class="textlink hero-work-link" href="research.html">Learn more about my work →</a></div>
   </div>
   <div class="hero-visual">
@@ -14,8 +14,8 @@
  </div>
 </section>
 <section class="thinking-section">
- <aside class="margin-note"><span>A recurring problem</span><p>A count of students in a disability category does not tell us how they were assessed or what happened in therapy.</p></aside>
- <div class="thinking-copy"><p class="eyebrow">What I keep coming back to</p><h2>Who gets counted, and as what?</h2><p class="thinking-lede">I want to understand how speech-language pathology became a trusted authority on communication and disability, and how white supremacy and anti-Blackness shaped that history. That means studying the profession’s standards, training, and claims to expertise alongside the experiences of the children it serves.</p><p>I’m interested in Black disabled children from low-resource communities: how they get services, how they are treated, and what happens as they move from school into college, work, and adulthood. My current studies use school records and survey data. I also want to study professional archives and Black people’s accounts of therapy, language, and school.</p><a class="textlink" href="methods.html">Methods →</a></div>
+ <aside class="margin-note"><span>A recurring problem</span><p>The Florida thesis measures program membership. My historical questions concern how professions acquired the authority to define the categories those records use.</p></aside>
+ <div class="thinking-copy"><p class="eyebrow">What I keep coming back to</p><h2>How does a profession become an authority on disability?</h2><p class="thinking-lede">My historical questions concern how speech-language pathology established its authority to distinguish communication disorders from language differences. I want to investigate how white supremacy and anti-Blackness shaped the knowledge, assessment standards, and professional institutions through which those distinctions became credible.</p><p>That agenda also concerns what diagnosis does in children’s lives. I’m interested in the relationship between obtaining needed services and being expected to change one’s speech, including African American English, to meet school and clinical standards. I want to examine how Black children understand those encounters and how adults remember their consequences for language identity and self-determination.</p><a class="textlink" href="methods.html">Methods →</a></div>
 </section>
 <section class="puzzle-section">
  <div class="section-intro"><p class="eyebrow">Current research</p><h2>When Speech and Language Diverge</h2><p class="project-subline">Racial and ethnic patterns in Florida speech and language impairment program membership, 2017–2025</p></div>
@@ -38,10 +38,10 @@
   <button type="button" role="tab" aria-selected="false" aria-controls="trajectory-panel" data-step="sociology"><b>Sociology</b></button>
  </div>
  <div class="trajectory-panel" id="trajectory-panel" role="tabpanel" tabindex="0">
-  <p data-trajectory-copy>I entered college planning to become a school-based speech-language pathologist. I hoped to work with Black and Latino children from low-resource communities, and studying special education soon raised questions about how schools decide who needs services.</p>
+  <p data-trajectory-copy>I entered college planning to become a school-based speech-language pathologist working with Black and Latino children from low-resource communities.</p>
  </div>
  <div class="trajectory-footer">
-  <p>I began with questions about becoming a clinician. I now want to study how clinicians acquire authority and how schools use their judgments.</p>
+  <p>My questions moved from clinical practice to the history and sociology of the profession: how its knowledge became authoritative, how race entered its standards, and what those standards mean for the children being assessed.</p>
   <a class="textlink" href="about.html">Read my story →</a>
  </div>
 </section>
@@ -55,11 +55,7 @@
  const steps=[...document.querySelectorAll('.trajectory-steps [data-step]')];
  const copy=document.querySelector('[data-trajectory-copy]');
  if(!steps.length||!copy)return;
- const text={
-  slp:'I entered college planning to become a school-based speech-language pathologist. I hoped to work with Black and Latino children from low-resource communities, and studying special education soon raised questions about how schools decide who needs services.',
-  questions:'Studying special education made me curious about who defines a disorder, how students become eligible for services, and why access differs by race and class. I wanted to understand the decisions around diagnosis as well as what a diagnosis means for a child.',
-  sociology:'I use sociology to study how professional knowledge and institutional rules shape whose needs are recognized, what support they receive, and how those decisions affect young people’s lives. Speech-language pathology is one setting for those questions, alongside education policy and other public institutions.'
- };
+ const text={"slp":"I entered college planning to become a school-based speech-language pathologist working with Black and Latino children from low-resource communities.","questions":"Studying special education led me to questions about diagnostic authority: how clinicians distinguish communication disorder from language difference, how their standards become accepted in schools, and how race shapes those judgments.","sociology":"My interests now connect historical sociology, critical disability studies, and the sociology of professions. I want to investigate how speech-language pathology established diagnostic authority and how Black people experience assessment and therapy."};
  steps.forEach(btn=>btn.addEventListener('click',()=>{
   steps.forEach(b=>b.setAttribute('aria-selected',String(b===btn)));
   copy.textContent=text[btn.dataset.step];
