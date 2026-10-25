@@ -9,7 +9,7 @@ body>header{min-height:84px;display:flex;align-items:center;justify-content:spac
 .brand{display:inline-flex;align-items:baseline;gap:10px;color:var(--ink);font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap}
 .brand small{font-size:11px;font-weight:500;letter-spacing:.02em;color:var(--muted)}
 nav[aria-label='Primary navigation']{display:flex;align-items:center;gap:22px}
-nav[aria-label='Primary navigation'] a{display:inline-flex;align-items:center;min-height:44px;border-bottom:2px solid transparent;font-size:14px;font-weight:550;text-decoration:none}
+nav[aria-label='Primary navigation'] a{display:inline-flex;align-items:center;min-height:44px;border-bottom:2px solid transparent;color:var(--ink);font-size:14px;font-weight:550;text-decoration:none}
 nav[aria-label='Primary navigation'] a:hover,nav[aria-label='Primary navigation'] a[aria-current='page']{border-color:var(--accent)}
 a{color:var(--accent);text-underline-offset:.22em;text-decoration-thickness:1px}
 a:hover{text-decoration-thickness:2px}
@@ -121,8 +121,9 @@ footer a{color:inherit}
 .projectgrid h3{font-family:var(--sans);font-size:15px;font-weight:650;letter-spacing:0;margin:26px 0 10px}
 .projectgrid h3:first-child{margin-top:0}
 .projectgrid>div:first-child{grid-column:1}
+.projectgrid>div:first-child p{max-width:68ch}
 .projectgrid>.detail{grid-column:2;grid-row:1 / span 2}
-.detail{font-size:14px;line-height:1.6;border-left:1px solid var(--line);padding-left:22px}
+.detail{align-self:start;font-size:14px;line-height:1.6;border-left:1px solid var(--line);padding-left:22px}
 .detail b{font-size:12px;font-weight:650}
 .boundary{grid-column:1;font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px;margin:0}
 .study-map{display:flex;flex-wrap:wrap;gap:8px 24px;padding:12px 0;border-block:1px solid var(--line)}
@@ -160,6 +161,8 @@ summary{cursor:pointer;color:var(--accent);font-size:14px;line-height:1.5;paddin
 /* About. */
 .about-pagehead{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:64px;align-items:center}
 .about-name h1{margin-bottom:0}
+.about-name{margin-bottom:22px}
+.about-name .pronouns{margin:10px 0 0}
 .about-head-copy .lede{max-width:53ch}
 .about-headshot{margin:0}
 .about-headshot img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
@@ -202,6 +205,7 @@ summary{cursor:pointer;color:var(--accent);font-size:14px;line-height:1.5;paddin
 .writing-shortcuts{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:26px;font-size:14px}
 .writing-mark{display:none}
 .writing-section>h2{margin-bottom:24px}
+.writing-section{padding:44px 0}
 .pub{display:grid;grid-template-columns:90px minmax(0,1fr);gap:28px;padding:24px 0;border-top:1px solid var(--line)}
 .pub .year{font-size:12px;color:var(--accent);margin-top:4px}
 .pub h3{font-size:23px;max-width:70ch;margin-bottom:10px}
