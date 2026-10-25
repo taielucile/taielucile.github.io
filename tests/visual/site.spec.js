@@ -11,6 +11,7 @@ const pages = [
 ];
 
 const viewports = [
+  ['320', { width: 320, height: 740 }],
   ['390', { width: 390, height: 844 }],
   ['768', { width: 768, height: 1024 }],
   ['1440', { width: 1440, height: 1000 }],
@@ -23,6 +24,8 @@ for (const [pageName, path] of pages) {
       await page.setViewportSize(viewport);
       await page.goto(path, { waitUntil: 'networkidle' });
       await page.evaluate(() => document.fonts && document.fonts.ready);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(viewport.width + 1);
+      expect(await page.locator('img').evaluateAll(images => images.filter(image => !image.complete || image.naturalWidth === 0).map(image => image.src))).toEqual([]);
       await expect(page.locator('body')).toHaveScreenshot(
         `${pageName}-${widthName}.png`,
         {
@@ -36,3 +39,4 @@ for (const [pageName, path] of pages) {
     });
   }
 }
+
