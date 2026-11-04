@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="8" y="8" width="52" height="52" rx="12" fill="#17383c"/>
-  <rect x="3.5" y="3.5" width="52" height="52" rx="11" fill="#f3eadc" stroke="#d0b77d" stroke-width="1.2"/>
-  <path d="M13 17.5h30" fill="none" stroke="#a45136" stroke-width="1.2" stroke-linecap="round"/>
-  <text x="29" y="48" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="43" fill="#17383c">T</text>
-  <path d="M47 10.5l1.8 4.2 4.2 1.8-4.2 1.8-1.8 4.2-1.8-4.2-4.2-1.8 4.2-1.8z" fill="#bd8750"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#f5eddf"/><text x="32" y="49" text-anchor="middle" font-family="Georgia,serif" font-size="48" fill="#243c34">T</text></svg>
