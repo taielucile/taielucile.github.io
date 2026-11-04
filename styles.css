@@ -60,6 +60,7 @@ footer a{color:inherit}
 .home-about>div p{max-width:60ch}
 .home-writing{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px 56px}
 .writing-feature{font-size:15px;grid-column:2}
+.writing-feature>.textlink{display:inline-block;margin-top:16px}
 .writing-feature h3{font-size:34px;margin-bottom:16px}
 .contact-strip{font-size:16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
 .contact-strip h2{margin-bottom:16px}
@@ -107,7 +108,6 @@ summary{cursor:pointer;color:var(--accent);font-size:14px;line-height:1.5;paddin
 .grid.two h3{font-size:23px;margin-bottom:8px}
 .grid.two article p{font-size:15px;color:var(--muted)}
 .grid.two article small{display:block;margin-top:12px;font-size:14px;line-height:1.65;max-width:50ch}
-.recognition-section>h2{font-family:var(--sans)}
 .method-evidence>article{max-width:75ch;display:block;padding:32px 0}
 .method-evidence>article:first-of-type{padding-top:12px}
 .method-evidence>article:last-of-type{padding-bottom:0}
