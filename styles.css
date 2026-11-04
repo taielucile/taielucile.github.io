@@ -42,11 +42,11 @@ main>section{padding:var(--section) 0}
 body>footer{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:88px;padding:22px 0;font-size:12px;color:var(--muted)}
 footer a{color:inherit}
 .home-page .editorial-hero-photo{padding:24px 0 64px}
-.hero-composition{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.15fr);gap:52px;align-items:center}
+.hero-composition{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center;max-width:1080px;margin-inline:auto}
 .hero-copy h1{font-size:clamp(44px,4.8vw,66px);line-height:1.12;max-width:15ch}
-.hero-statement{font-size:18px;line-height:1.65;max-width:47ch;margin:30px 0 0}
+.hero-statement{font-size:18px;line-height:1.65;max-width:none;margin:30px 0 0}
 .hero-links{margin-top:28px}
-.hero-visual{display:block;max-width:400px;justify-self:end;min-width:0}
+.hero-visual{display:block;width:100%;max-width:400px;justify-self:end;min-width:0}
 .home-portrait{margin:0;width:100%}
 .home-portrait img{display:block;width:100%;aspect-ratio:.735;object-fit:cover;object-position:center 36%}
 .home-portrait figcaption{font-size:12px;display:flex;justify-content:space-between;gap:18px;margin-top:12px;padding-top:10px;line-height:1.5;color:var(--muted)}
