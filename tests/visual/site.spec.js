@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const fs = require('node:fs');
-const expectedStylesheet = fs.readFileSync('index.html', 'utf8').match(/href="([^"]*styles\\.css[^"]*)"/)[1];
+const expectedStylesheet = fs.readFileSync('index.html', 'utf8').match(/href="([^"]*styles[.]css[^"]*)"/)[1];
 
 const pages = [
   ['home', '/'],
