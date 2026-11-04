@@ -40,7 +40,7 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - name: Wait for published site
         if: github.event_name == 'push'
-        run: sleep 45
+        run: node tests/visual/wait-for-publish.cjs
       - name: Capture visual baselines / compare
         env:
           VISUAL_BASE_URL: https://taielucile.github.io

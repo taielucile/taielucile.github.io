@@ -1,4 +1,6 @@
 const { test, expect } = require('@playwright/test');
+const fs = require('node:fs');
+const expectedStylesheet = fs.readFileSync('index.html', 'utf8').match(/href="([^"]*styles\\.css[^"]*)"/)[1];
 
 const pages = [
   ['home', '/'],
@@ -22,7 +24,8 @@ for (const [pageName, path] of pages) {
   for (const [widthName, viewport] of viewports) {
     test(`${pageName} @ ${widthName}px`, async ({ page }) => {
       await page.setViewportSize(viewport);
-      await page.goto(path, { waitUntil: 'networkidle' });
+      await page.goto(path + '?qa=' + encodeURIComponent(process.env.GITHUB_SHA || 'local'), { waitUntil: 'networkidle' });
+      await expect(page.locator('link[rel="stylesheet"]')).toHaveAttribute('href', expectedStylesheet);
       await page.evaluate(() => document.fonts && document.fonts.ready);
       expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(viewport.width + 1);
       expect(await page.locator('img').evaluateAll(images => images.filter(image => !image.complete || image.naturalWidth === 0).map(image => image.src))).toEqual([]);
