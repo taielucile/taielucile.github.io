@@ -95,9 +95,9 @@ cite{font-style:normal}
 .contact-strip p{max-width:46ch;font-size:16px}
 .contact-links{display:flex;flex-wrap:wrap;gap:12px 20px;font-size:14px}
 
-.about-personal{max-width:65ch;margin-top:32px;padding:24px 28px;background:var(--sage)}
-.about-personal h2{font-size:28px;margin-bottom:14px}
-.about-personal p{font-size:16px;line-height:1.75}
+
+
+
 .site-footer{border-top:1px solid #dcd6c7;gap:32px;padding:28px 0 36px}
 .site-footer .footer-name{font-weight:500}
 .site-footer>div{display:flex;flex-direction:column;gap:6px}
@@ -148,16 +148,16 @@ summary{cursor:pointer;color:var(--accent);font-size:14px;line-height:1.5;paddin
 .thesis-detail h3{margin-bottom:12px}
 .thesis-detail p{font-size:16px;line-height:1.7}
 .thesis-detail p:last-child{color:var(--muted);margin-top:20px}
-.about-pagehead{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:64px;align-items:center}
-.about-name h1{margin-bottom:0}
-.about-name{margin-bottom:22px}
-.about-name .pronouns{margin:10px 0 0}
-.about-head-copy .lede{max-width:53ch}
-.about-headshot{margin:0}
-.about-headshot img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
-.about-headshot figcaption{font-size:11px;color:var(--muted);margin-top:10px}
-.about-story{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:64px}
-.about-story>div>p{max-width:65ch;margin-bottom:24px;line-height:1.75}
+
+
+
+
+
+
+
+
+
+
 .grid.two{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:22px}
 .grid.two article{padding:22px 0}
 .grid.two h3{font-size:23px;margin-bottom:8px}
@@ -253,8 +253,8 @@ summary{cursor:pointer;color:var(--accent);font-size:14px;line-height:1.5;paddin
 .hero-followup{font-size:15px}
 .home-page .editorial-hero-photo{padding:24px 0 52px}
 .home-about,.home-writing{gap:32px}
-.about-pagehead{grid-template-columns:minmax(0,1fr) 200px;gap:40px}
-.about-story{grid-template-columns:minmax(0,1fr) 220px;gap:40px}
+
+
 }
 @media (max-width:760px){
 :root{--section:44px}
@@ -312,7 +312,7 @@ h3{font-size:22px}
 .contact-strip{padding:28px 0}
 .contact-strip h2{font-size:30px}
 .contact-links{gap:0 20px}
-.about-personal{padding:24px;margin-top:28px}
+
 .site-footer{gap:16px;padding:24px 0 28px}
 .site-footer nav{justify-content:flex-start;gap:0 22px}
 .page-index{font-size:14px;gap:0 20px;padding:4px 0 24px}
@@ -330,12 +330,12 @@ body>footer{align-items:start;flex-direction:column;justify-content:center;gap:1
 .projectgrid>.detail{padding:18px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:18px;font-size:13px}
 .projectgrid>.detail p{margin:0}
 .boundary{font-size:14px}
-.about-pagehead{grid-template-columns:1fr;gap:28px}
-.about-headshot{width:min(100%,260px)}
-.about-story{grid-template-columns:1fr;gap:28px}
-.about-story>div>p{margin-bottom:22px;line-height:1.75}
-.about-story>.detail{padding:0;display:block;font-size:14px;max-width:48ch}
-.about-story>.detail p{margin:0}
+
+
+
+
+
+
 .grid.two{grid-template-columns:1fr;margin-top:16px}
 .grid.two article{padding:20px 0}
 .method-evidence>article,.feature{max-width:75ch;grid-template-columns:1fr;gap:22px}
@@ -375,11 +375,71 @@ body>footer{align-items:start;flex-direction:column;justify-content:center;gap:1
 @media (max-width:380px){
 .brand{font-size:19px;gap:6px}.brand small{display:none}.brand-sun{width:20px;height:20px}
 .hero-composition{grid-template-columns:minmax(0,1fr) 104px;gap:22px 14px}.hero-copy h1{font-size:32px}.hero-statement{font-size:17px}.hero-visual{max-width:104px}.section-heading{align-items:flex-start;flex-direction:column;gap:2px}.section-heading h2{font-size:27px}
-.about-story>.detail{grid-template-columns:1fr}
+
 }
 @media (prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
 *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+/* About: one shared grid for the introduction, portrait, education, and biography. */
+.about-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;column-gap:64px;row-gap:32px;align-items:start;padding:40px 0 56px}
+.about-intro{grid-column:1;grid-row:1;min-width:0;padding:0}
+.about-intro h1{margin:0;font-size:clamp(42px,4.5vw,62px);line-height:1.15}
+.about-name{margin:0 0 20px}
+.about-name .pronouns{margin:10px 0 0}
+.about-intro .lede{max-width:58ch;margin:0;font-size:19px;line-height:1.65}
+.about-profile{grid-column:2;grid-row:1/span 2;display:flex;flex-direction:column;gap:24px;min-width:0}
+.about-headshot{margin:0;width:100%}
+.about-headshot img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.about-headshot figcaption{font-size:12px;color:var(--muted);line-height:1.5;margin-top:10px}
+.about-education{padding:0}
+.about-education h2{font:600 16px/1.5 var(--sans);margin:0 0 12px}
+.about-education p{font-size:14px;line-height:1.7;margin:0}
+.about-education p+p{margin-top:12px;color:var(--muted)}
+.about-biography{grid-column:1;grid-row:2;min-width:0;padding:0;max-width:66ch}
+.about-biography>p{margin:0;font-size:17px;line-height:1.75}
+.about-biography>p+p{margin-top:24px}
+.about-personal{margin:32px 0 0;padding:24px;background:var(--sage);border-radius:3px}
+.about-personal h2{font-size:25px;line-height:1.25;margin:0 0 12px}
+.about-personal p{font-size:16px;line-height:1.7;margin:0}
+.about-page .about-recognition{padding:0 0 24px}
+.about-recognition>h2{font-size:32px;line-height:1.25;max-width:none;margin:0 0 16px}
+.recognition-list{list-style:none;padding:0;margin:0}
+.recognition-list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 32px;align-items:baseline;padding:20px 0}
+.recognition-list h3{font-size:23px;line-height:1.35;margin:0 0 6px}
+.recognition-list p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+.recognition-list .recognition-date{font-size:13px;text-align:right;white-space:nowrap}
+.recognition-list .recognition-note{max-width:60ch;margin-top:10px}
+.about-page .next-nav{padding-top:16px}
+@media(max-width:1100px) and (min-width:761px){
+.about-layout{grid-template-columns:minmax(0,1fr) 240px;column-gap:40px}
+.about-intro .lede{font-size:18px}
+}
+@media(max-width:760px){
+.about-layout{grid-template-columns:1fr;gap:28px;padding:28px 0 40px}
+.about-intro,.about-profile,.about-biography{grid-column:1;grid-row:auto}
+.about-intro h1{font-size:39px;line-height:1.15}
+.about-name{margin-bottom:18px}
+.about-intro .lede{font-size:17px;line-height:1.7}
+.about-profile{display:grid;grid-template-columns:128px minmax(0,1fr);gap:24px;align-items:start}
+.about-education h2{font-size:15px;margin-bottom:8px}
+.about-education p{font-size:13px;line-height:1.65}
+.about-headshot figcaption{font-size:11px;margin-top:8px}
+.about-biography>p{font-size:16px;line-height:1.75}
+.about-biography>p+p{margin-top:22px}
+.about-personal{margin-top:28px;padding:22px}
+.about-personal h2{font-size:25px}
+.about-page .about-recognition{padding:0 0 20px}
+.about-recognition>h2{font-size:28px;margin-bottom:12px}
+.recognition-list li{column-gap:20px;padding:18px 0}
+.recognition-list h3{font-size:21px}
+.recognition-list p{font-size:13px}
+.recognition-list .recognition-date{font-size:12px}
+}
+@media(max-width:380px){
+.about-profile{grid-template-columns:104px minmax(0,1fr);gap:20px}
+.recognition-list li{column-gap:16px}
+.recognition-list h3{font-size:20px}
 }
 @page{size:letter;margin:.55in .62in}
 
