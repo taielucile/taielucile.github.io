@@ -49,7 +49,7 @@ test('desktop navigation and current research are readily available', async ({ p
   await expect(details).toHaveAttribute('open', '');
   await expect(details).toContainText('would not, on its own, establish discrimination');
   await page.getByRole('navigation', { name: 'Research projects' }).getByRole('link', { name: 'Service timing' }).click();
-  await expect(page.getByRole('heading', { name: 'Who Gets Help First?' })).toBeInViewport();
+  await expect(page.getByRole('heading', { name: 'Racial and Socioeconomic Differences in Reported Developmental-Service Initiation Before Age Three' })).toBeInViewport();
   await expect(page.locator('footer').getByRole('link', { name: 'Research methods' })).toHaveAttribute('href', 'methods.html');
 });
 
