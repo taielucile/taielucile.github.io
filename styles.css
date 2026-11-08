@@ -180,6 +180,8 @@ summary{cursor:pointer;color:var(--accent);font-size:14px;line-height:1.5;paddin
 .pub .year{font-size:12px;color:var(--accent);margin-top:4px}
 .pub h3{font-size:23px;max-width:70ch;margin-bottom:10px}
 .pub h3 a{color:var(--ink)}
+.published-section .pub-title{text-decoration:none}
+.published-section .pub-title:hover{text-decoration:underline}
 .pub p:not(.year){font-size:14px;color:var(--muted);max-width:82ch}
 .news-list{padding-top:0}
 .news-item{display:grid;grid-template-columns:165px minmax(0,1fr);gap:40px;padding:32px 0}
@@ -301,7 +303,10 @@ body>footer{align-items:start;flex-direction:column;justify-content:center;gap:1
 .method-evidence aside{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px;padding:14px 0 0;font-size:12px}
 .method-evidence aside b{grid-column:1/-1}
 .feature>.detail{padding:18px 0 0}
-.writing-shortcuts{gap:10px 22px;font-size:13px}
+.writing-page .pagehead{padding-bottom:20px}
+.writing-shortcuts{gap:10px 22px;font-size:13px;margin-top:20px;padding-bottom:0}
+.writing-section{padding:32px 0}
+.writing-section>h2{margin-bottom:8px}
 .pub{grid-template-columns:1fr;gap:8px;padding:22px 0}
 .pub .year{margin:0}
 .pub h3{font-size:22px;line-height:1.4;margin-bottom:10px}
