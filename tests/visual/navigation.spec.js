@@ -3,6 +3,18 @@ const { test, expect } = require('@playwright/test');
 const revision = process.env.GITHUB_SHA || 'ux';
 const fresh = path => `${path}?qa=${revision}`;
 
+test('paired homepage actions stay the same height on a phone', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(fresh('/'));
+  await page.evaluate(() => document.fonts.ready);
+  const primary = await page.locator('.hero-links .primary-action').boundingBox();
+  const secondary = await page.locator('.hero-links .secondary-action').boundingBox();
+  expect(primary).not.toBeNull();
+  expect(secondary).not.toBeNull();
+  expect(Math.abs(primary.height - secondary.height)).toBeLessThanOrEqual(1);
+  expect(Math.abs(primary.y - secondary.y)).toBeLessThanOrEqual(1);
+});
+
 for (const width of [320, 390]) {
   test(`mobile navigation opens, closes, and follows links at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 844 });
