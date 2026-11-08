@@ -43,6 +43,11 @@ test('desktop navigation and current research are readily available', async ({ p
   await page.goto(fresh('/research.html'));
   await expect(page.getByRole('button', { name: /Menu/ })).toBeHidden();
   await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toBeVisible();
+  const details = page.locator('.thesis-detail');
+  await expect(details).not.toHaveAttribute('open', '');
+  await page.getByText('Data, design, and limits', { exact: true }).click();
+  await expect(details).toHaveAttribute('open', '');
+  await expect(details).toContainText('would not, on its own, establish discrimination');
   await page.getByRole('navigation', { name: 'Research projects' }).getByRole('link', { name: 'Service timing' }).click();
   await expect(page.getByRole('heading', { name: 'Who Gets Help First?' })).toBeInViewport();
   await expect(page.locator('footer').getByRole('link', { name: 'Research methods' })).toHaveAttribute('href', 'methods.html');

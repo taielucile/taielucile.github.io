@@ -70,7 +70,8 @@ footer a{color:inherit}
 .research-row h3{font-size:29px;line-height:1.25;max-width:34ch;margin-bottom:12px}
 .research-row h3 a{color:var(--plum);text-decoration:none}
 .research-row h3 a:hover{text-decoration:underline}
-.research-row h3 span{font:400 21px var(--sans);color:var(--accent);white-space:nowrap}
+.research-row h3 .link-arrow{font:400 21px var(--sans);color:var(--accent);white-space:nowrap}
+.title-ending{white-space:nowrap}
 .research-row p{max-width:65ch;font-size:16px;line-height:1.7}
 cite{font-style:normal}
 .home-writing{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;padding:44px 40px;background:var(--sage);margin:24px 0 0}
@@ -109,7 +110,7 @@ cite{font-style:normal}
 .cv-index{max-width:82ch;padding-bottom:32px}
 .cv-section,.writing-section{scroll-margin-top:104px}
 .research-jump{display:flex;flex-wrap:wrap;gap:12px 28px;padding:20px 0;font-size:13px}
-.research-jump a{text-decoration:none}
+.research-jump a{text-decoration:underline}
 .research-jump a.active{text-decoration:underline}
 .research-jump a span{margin-right:8px;color:var(--muted);font-size:10px}
 .research-page .pagehead{padding-bottom:32px}
@@ -136,6 +137,12 @@ cite{font-style:normal}
 summary{cursor:pointer;color:var(--accent);font-size:14px;line-height:1.5;padding:14px 0}
 .study-detail p{font-size:15px;line-height:1.65;max-width:72ch;margin:0 0 18px}
 .study-detail[open] summary{margin-bottom:4px}
+.thesis-detail{margin-top:24px}
+.thesis-detail summary{font-size:16px;min-height:48px;text-decoration:underline;text-underline-offset:.22em}
+.thesis-detail>div{padding:16px 0 0;max-width:66ch}
+.thesis-detail h3{margin-bottom:12px}
+.thesis-detail p{font-size:16px;line-height:1.7}
+.thesis-detail p:last-child{color:var(--muted);margin-top:20px}
 .about-pagehead{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:64px;align-items:center}
 .about-name h1{margin-bottom:0}
 .about-name{margin-bottom:22px}
@@ -263,7 +270,7 @@ h3{font-size:22px}
 .next-nav{grid-template-columns:1fr 1fr;gap:20px;padding:30px 0}
 .next-nav>span{grid-column:1/-1}
 body>footer{align-items:start;flex-direction:column;justify-content:center;gap:10px;font-size:11px;min-height:100px}
-.research-jump{font-size:12px;gap:8px 18px;padding:16px 0}
+.research-jump{font-size:14px;gap:8px 18px;padding:16px 0}
 .research-jump a{padding:6px 0}
 .research-jump a span{display:none}
 .research-agenda{display:block;padding-bottom:36px}
@@ -303,7 +310,7 @@ body>footer{align-items:start;flex-direction:column;justify-content:center;gap:1
 }
 @media (max-width:380px){
 .brand{font-size:20px}.brand small{font-size:10px}
-.hero-composition{grid-template-columns:minmax(0,1fr) 92px;gap:20px 12px}.hero-copy h1{font-size:38px}.hero-visual{max-width:92px}.hero-links{gap:8px 18px}.hero-links .textlink{font-size:14px}.section-heading h2{font-size:26px}
+.hero-composition{grid-template-columns:minmax(0,1fr) 92px;gap:20px 12px}.hero-copy h1{font-size:38px}.hero-statement{font-size:17px}.hero-visual{max-width:92px}.hero-links{gap:8px 18px}.hero-links .textlink{font-size:14px}.section-heading h2{font-size:26px}
 .next-nav,.about-story>.detail{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
